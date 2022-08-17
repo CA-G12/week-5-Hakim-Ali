@@ -1,0 +1,157 @@
+* {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+}
+
+body {
+ font-family: sans-serif;
+}
+
+a {
+ text-decoration: none;
+ color: #000;
+}
+
+.form {
+ width: 100%;
+ height: 50vh;
+ background: rgb(142, 139, 139);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.btn{
+ text-transform: uppercase;
+ text-decoration: none;
+ color: #fff;
+ padding: 1rem;
+ display: inline-block;
+ background-color: #ff1e00;
+ border-radius: 3%;
+ border: none;
+ cursor: pointer;
+ font-size: 1rem;
+ margin:  20px auto;
+ display: block;
+}
+.btn:hover{
+ color: #E8F9FD;
+ font-weight:500 ;
+}
+.search-bar{
+ width: 100%;
+}
+
+.search-bar input{
+ padding: 12px 150px;
+ border-style: none;
+ border: 1px solid #CFD2CF;
+ border-radius: 8px;
+}
+.search-bar input:focus{
+ outline: none !important;
+}
+.search-bar input[type="search"]{
+font-size:2rem !important;
+}
+
+
+/* card */
+.content{
+ display: flex;
+ justify-content: space-around;
+}
+
+.card {
+ position: relative;
+ overflow: hidden;
+ width: 278px;
+ height: 300px;
+ margin: 50px auto;
+ background: #2a264f;
+ border: 5px solid #1a163f;
+ border-radius: 3px;
+}
+
+.card .img1 {
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 60%;
+ width: 100%;
+ background-position: left top;
+ transition: all 0.5s ease-in-out;
+}
+
+.card .title {
+ height: 22%;
+ width: 100%;
+ font-size: 20px;
+ text-align: center;
+ font-weight: 700;
+ color: #FFFC;
+ padding: 15px 10px;
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ box-shadow: 0 -95px 28px -25px #000 inset;
+}
+
+.card .text {
+ position: absolute;
+ bottom: 80px;
+ height: 120px;
+ padding: 15px 10px;
+ text-align: center;
+ font-size: 17px;
+ color: #fff;
+ transform: translateY(200px);
+ transform-origin: 0 100px;
+ opacity: 0;
+ transition: all 0.5s ease;
+}
+
+.card .catagory {
+ position: absolute;
+ left: 10px;
+ top: 140px;
+ padding: 3px 10px;
+ font-size: 15px;
+ font-weight: 700;
+ text-align: center;
+ background: #2a264f;
+ color: #fff;
+ border-radius: 5px;
+ transform: translate(-160px, 0);
+ transition: all 0.5s ease;
+}
+
+.card .views {
+ position: absolute;
+ left: 10px;
+ top: 175px;
+ padding: 3px 10px;
+ font-size: 15px;
+ font-weight: 700;
+ text-align: center;
+ background: #8b2463;
+ color: #fff;
+ border-radius: 5px;
+ transform: translate(-160px, 0);
+ transition: all 0.5s ease 0.15s;
+}
+
+.card:hover .img1 {
+ opacity: 0.5;
+}
+
+
+.card:hover .text {
+ opacity: 0.8;
+ transform: rotate(0deg);
+} 
+
