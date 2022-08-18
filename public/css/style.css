@@ -157,3 +157,10 @@ font-size:2rem !important;
  transform: rotate(0deg);
 } 
 
+
+/* -------------------------- */
+#error {
+  font-size: 2rem;
+  color: blue;
+  margin: .4rem auto;
+}
