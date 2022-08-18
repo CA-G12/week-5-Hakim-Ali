@@ -1,7 +1,43 @@
+const btn = document.getElementById("btn");
+const film = document.getElementById("film");
+const error = document.getElementById('error')
+const content = document.querySelector('.content')
+
+let allShows;
+
+btn.addEventListener("click", (e) => {
+  e.preventDefault(e);
+  content.textContent = '';
+  const showName = film.value;
+  const showID = searchShow(allShows, showName);
+
+  fetch(`/shows/${showID}/episodes`)
+    .then((res) => res.json())
+    .then((data) => {
+      objData(data)
+    })
+    .catch((err) => console.log("err"));
+});
+
+const searchShow = (shows, showName) => {
+  const show = shows.filter(show => {
+    return show.name.toLowerCase() === showName.toLowerCase();
+  })
+  if(show.length === 1) {
+    error.innerHTML = ''
+    return show[0].id;
+  } else {
+    error.innerHTML = `<h5>مش مشكلتي انك مش مدخل الاسم صح</h5>`
+  }
+}
+
 window.onload = () => {
   fetch('/shows')
     .then((res) => res.json())
-    .then((data) => objData(data))
+    .then((data) => {
+        objData(data)
+      allShows = data;
+    })
     .catch((err) => console.log(err));
 };
 
